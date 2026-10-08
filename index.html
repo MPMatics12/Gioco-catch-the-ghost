@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarica Catch the Ghost</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #1a1a1a; color: white; padding: 50px; }
+        .container { background-color: #2a2a2a; padding: 30px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        select, button { padding: 12px 20px; font-size: 16px; margin-top: 15px; border-radius: 5px; border: none; }
+        select { background-color: #444; color: white; cursor: pointer; }
+        button { background-color: #28a745; color: white; cursor: pointer; font-weight: bold; margin-left: 10px; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Catch the Ghost 👻</h1>
+        <p>Scegli la versione a cui vuoi giocare e clicca sul pulsante per scaricarla.</p>
+        
+        <!-- Menu di selezione della versione aggiornato -->
+        <label for="versionSelect">Seleziona Versione:</label>
+        <select id="versionSelect">
+            <option value="https://github.com/Matics12/catch-the-ghost/releases/download/v1/Catch.the.ghost.v1.2.zip">Versione 1.2 (Ultima)</option>
+            <option value="https://github.com/Matics12/catch-the-ghost/releases/download/v1/Catch.the.ghost.v1.1.zip">Versione 1.1 (Precedente)</option>
+            <option value="https://github.com/Matics12/catch-the-ghost/releases/download/v1/Catch.the.ghost.v1.0.zip">Versione 1.0 (Precedente)</option>
+        </select>
+        
+        <!-- Pulsante di download -->
+        <button id="downloadBtn">Scarica Ora</button>
+    </div>
+
+    <script>
+        const select = document.getElementById('versionSelect');
+        const button = document.getElementById('downloadBtn');
+
+        button.addEventListener('click', () => {
+            const downloadUrl = select.value;
+            window.location.href = downloadUrl;
+        });
+    </script>
+
+</body>
+</html>
